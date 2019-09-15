@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body>
+  
+<h2>Nama Pemilik warung</h2>
+
+<div ng-app="myApp" ng-controller="customersCtrl">
+	<table>
+    <tr>
+      <th>no</th>
+      <th>Nama Pemilik</th>
+    </tr>
+	  <tr ng-repeat="x in names">
+      <td>{{ x.no }}</td>
+	    <td>{{ x.namapemilik }}</td>
+	  </tr>
+	</table>
+</div>
+ 
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+   $http.get("http://localhost/angular-test/index.php?action=getAllWarung")
+   .then(function (response) {$scope.names = response.data;});
+});
+</script>
+</body>
+</html>
