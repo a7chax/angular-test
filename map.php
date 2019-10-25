@@ -8,15 +8,17 @@
 
 <script>
 function myMap() {
-var mapProp= {
+var mapProp= { 
   center:new google.maps.LatLng(51.508742,-0.120850),
-  zoom:5,
+  zoom:10,
 };
+
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
 }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0Xuc7W-nWv6TAYSugX8xG4bvDkXdfEOg&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJKPutHwUu38cex2pApve5YhnGoWjL8IM&callback=myMap"></script>
 
 </body>
 </html>

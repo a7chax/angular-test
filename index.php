@@ -104,6 +104,23 @@
 			}
 			$con->close();
 	break;
+
+		Case "getAllLokasi":
+		$q = $con->query(
+			"SElECT * FROM tblokasi");
+
+		$rows = array();
+			while($r = mysqli_fetch_assoc($q))
+			{
+				$rows[] = $r;
+			}
+			print json_encode($rows);
+			// echo "hello";
+		$con->close;
+
+	break;
+
+
 	
 	}
  ?>
